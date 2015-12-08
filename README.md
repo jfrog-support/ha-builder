@@ -7,10 +7,10 @@ A repo for the ha-builder scripts and Dockerfiles
 -Docker CLI installed, runnable without 'sudo' (or modify habuilder.sh to use sudo for docker commands) 
 
 ### Build the images ###
-1.Clone the repo
+1.Clone this repo to your host
 `git clone https://github.com/jfrog-support/ha-builder.git`
 
-2.The habuilder.sh shell script will try to figure out your host IP and modify the ha-builder/clusterhome/stroage.properties file to it, however you may need to modify this section to make it work with your own system:
+2.The habuilder.sh shell script will try to figure out your host IP and modify the ha-builder/clusterhome/stroage.properties file accordingly, however you may need to modify this section to make it work with your own system:
 ```bash
 #We'll need to dynamically replace the IP inside storage.properties to the IP of this vagrant host
 IP=`ifconfig  | grep inet | grep -v inet6 | head -n3 | tail -n1 | awk '{print $2}'`
