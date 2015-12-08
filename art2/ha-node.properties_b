@@ -1,0 +1,5 @@
+node.id=art2
+cluster.home=/clusterhome
+context.url=http://127.0.0.1:8082/artifactory
+membership.port=10002
+primary=false
