@@ -57,5 +57,5 @@ FLUSH PRIVILEGES;`
 
 `docker run -d -p 8082:8082 --name art2 --volumes-from cluster_home artifactory_8082`
 
-6.Since both nodes were intitialised without a license, Artifactory will start in Offline Mode. Acquire bash access to both nodes with 'docker exec -it art{1|2} /bin/bash', and manually create the artifactory.lic files. After doing that, 'service artifactory restart', and your done! Enjoy.
+6.Since both nodes were intitialised without a license, Artifactory will start in Offline Mode. Acquire bash access to both nodes with 'docker exec -it art{1|2} /bin/bash', and manually create the artifactory.lic files at /var/opt/jfrog/artifactory/etc. After doing that, run 'docker restart art{1|2}', and your done! Enjoy.
 
