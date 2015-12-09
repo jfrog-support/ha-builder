@@ -5,9 +5,10 @@ MAINTAINER Uriah L. "uriahl@jfrog.com"
 
 ####Build art2####
 
+#Commenting out the artifactory.lic adding til we get a private repo
 #Add artifactory.lic
-ADD ./artifactory.lic_b /var/opt/jfrog/artifactory/etc/artifactory.lic
-RUN chown artifactory /var/opt/jfrog/artifactory/etc/artifactory.lic
+#ADD ./artifactory.lic_b /var/opt/jfrog/artifactory/etc/artifactory.lic
+#RUN chown artifactory /var/opt/jfrog/artifactory/etc/artifactory.lic
 #Add ha-node.properties
 ADD ./ha-node.properties_b /var/opt/jfrog/artifactory/etc/ha-node.properties
 RUN chown artifactory /var/opt/jfrog/artifactory/etc/ha-node.properties
