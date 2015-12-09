@@ -6,6 +6,8 @@ A repo for the ha-builder scripts and Dockerfiles
 ### Prerequirsites ###
 -Docker CLI installed, runnable without 'sudo' (or modify habuilder.sh to use sudo for docker commands) 
 
+-Two valid Artifactory HA licenses
+
 ### Build the images ###
 1.Clone this repo to your host
 `git clone https://github.com/jfrog-support/ha-builder.git`
@@ -55,4 +57,5 @@ FLUSH PRIVILEGES;`
 
 `docker run -d -p 8082:8082 --name art2 --volumes-from cluster_home artifactory_8082`
 
-5.Your done. Enjoy!
+6.Since both nodes were intitialised without a license, Artifactory will start in Offline Mode. Acquire bash access to both nodes with 'docker exec -it art{1|2} /bin/bash', and manually create the artifactory.lic files. After doing that, 'service artifactory restart', and your done! Enjoy.
+
